@@ -76,7 +76,7 @@ Then open the local development URL in your browser.
 ## 📷 Output
 
 ### Home
-![Home](https://github.com/user-attachments/assets/405703f2-aeee-467f-8fff-5bbae014830e)
+![Home](https://github.com/user-attachments/assets/a75b49a7-ad8a-4279-8c4e-01a224e3bb52)
 
 ### Output
 ![Output](https://github.com/user-attachments/assets/544f5ca1-22b2-4a6f-833e-6f998670825a)
