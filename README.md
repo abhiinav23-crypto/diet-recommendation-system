@@ -84,3 +84,7 @@ Then open the local development URL in your browser.
 ## 👨‍💻 Author
 
 Abhinav Vashistha
+
+## ⚠️ Note
+Trained model is not included due to size limitations.  
+Run train_model.py to generate the model.
