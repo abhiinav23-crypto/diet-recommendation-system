@@ -1,0 +1,226 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f6f1e8;
+  background:
+    radial-gradient(circle at top, rgba(236, 179, 144, 0.28), transparent 35%),
+    linear-gradient(135deg, #16302b 0%, #1d4738 45%, #7a3b2e 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.hero-panel {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  background: rgba(13, 25, 23, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+  padding: 32px;
+  backdrop-filter: blur(18px);
+}
+
+.hero-copy {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #f8d7a4;
+  font-size: 0.8rem;
+}
+
+.hero-copy h1,
+.result-header h2,
+.info-card h3 {
+  margin: 0;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.3rem, 4vw, 4.4rem);
+  line-height: 0.98;
+}
+
+.hero-text,
+.summary,
+.info-card p,
+.info-card li,
+.status {
+  color: rgba(246, 241, 232, 0.82);
+}
+
+.hero-text {
+  margin-top: 14px;
+  max-width: 56ch;
+  line-height: 1.6;
+}
+
+.diet-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.diet-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.diet-form span,
+.macro-grid span {
+  font-size: 0.92rem;
+  color: #d8c8b7;
+}
+
+.diet-form input,
+.diet-form select {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 248, 240, 0.08);
+  color: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  outline: none;
+}
+
+.diet-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.diet-form input:focus,
+.diet-form select:focus {
+  border-color: #f8d7a4;
+  box-shadow: 0 0 0 3px rgba(248, 215, 164, 0.14);
+}
+
+.full-width,
+.diet-form button {
+  grid-column: 1 / -1;
+}
+
+.diet-form button {
+  border: 0;
+  border-radius: 18px;
+  padding: 16px 20px;
+  background: linear-gradient(90deg, #f0b56f 0%, #d86a4d 100%);
+  color: #1b1815;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.diet-form button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 32px rgba(216, 106, 77, 0.28);
+}
+
+.diet-form button:disabled {
+  opacity: 0.72;
+  cursor: wait;
+}
+
+.status {
+  margin: 18px 0 0;
+}
+
+.status.error {
+  color: #ffb9b4;
+}
+
+.results {
+  margin-top: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.result-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.summary {
+  margin: 0;
+}
+
+.macro-grid,
+.detail-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.macro-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.macro-grid article,
+.info-card {
+  border-radius: 20px;
+  padding: 18px;
+  background: rgba(255, 248, 240, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.macro-grid strong {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.detail-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.info-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.full-span {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 800px) {
+  .hero-panel {
+    padding: 22px;
+  }
+
+  .diet-form,
+  .macro-grid,
+  .detail-grid,
+  .result-header {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .result-header {
+    align-items: start;
+  }
+}
